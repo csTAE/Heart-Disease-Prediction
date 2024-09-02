@@ -1,0 +1,62 @@
+ <html> 
+    <head> 
+        <title>heart disease prediction</title>
+        <link rel="stylesheet" href="./static/ui2.css"> 
+    </head> 
+    <body>  
+        <div class="bg-img"> 
+            <div class="content">
+                <header>Check heart disease</header>
+                <div class="form1">
+                <form action="{{url_for('predict')}}" method="post">
+
+                    <div class="field space">
+                        <input type="number" name="a" id ="name" placeholder=" age" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="1" name="b" id ="name" placeholder=" gender(1 = male,0 = female)" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="4" name="c" id ="name" placeholder=" chest pain type (0 to 4)" required> 
+                    </div>
+                    <div class="field space">
+                        <input type="number" name="d" id ="name" placeholder=" resting blood pressure" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" name="e" id ="name" placeholder=" serum cholestoral in mg/dl" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="1" name="f" id ="name" placeholder=" fasting blood sugar(1 = true; 0 = false)" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="2" name="g" id ="name" placeholder=" resting electrocardiographic(0 to 2)" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" name="h" id ="name" placeholder=" maximum heart rate achieved" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="1" name="i" id ="name" placeholder=" exercise induced angina(1 = yes; 0 = no)" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" name="j" id ="name" placeholder=" oldpeak = ST depression " required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" name="k" id ="name" placeholder=" the slope of the peak exercise ST segment" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="3" name="l" id ="name" placeholder=" number of major vessels (0-3)" required> 
+                    </div> 
+                    <div class="field space">
+                        <input type="number" min="0" max="2" name="m" id ="name" placeholder=" thal (0 to 2)" required> 
+                    </div> 
+                    <br>
+                    <button type="submit" class="btn" id="submit" value='predict!'>Predict</button>
+                    <br>
+                </form>
+                </div>
+                <b><p style="color: #090909; text-align: center; font-size: 15px; ">{{pred}}</p></b>
+            </div>
+        </div>
+        
+    </body>
+</html>        
